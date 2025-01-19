@@ -8,15 +8,16 @@ RUN apt-get update && apt-get install -y openjdk-17-jdk \
 LABEL authors="indiagator"
 
 # Copy the JAR file into the container
-COPY target/eurekaserverboot3-stag-2.jar app.jar
+COPY target/eurekaserverboot3-prod-1.jar app.jar
 
 # Expose the port the app runs on
 EXPOSE 8761:8761
 
 #INSTALLING UTILITIES
-RUN apt-get update
-RUN apt-get install -y gcc
-RUN apt-get install -y curl
+#RUN apt-get update
+#RUN apt-get install -y gcc
+#RUN apt-get install -y curl
+
 
 # Run the application
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-Dspring.profiles.active=prod", "-jar", "app.jar"]

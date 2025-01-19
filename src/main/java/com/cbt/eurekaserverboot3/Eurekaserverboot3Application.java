@@ -11,12 +11,7 @@ public class Eurekaserverboot3Application
 
     public static void main(String[] args)
     {
-        SpringApplication application = new SpringApplication(Eurekaserverboot3Application.class);
-
-        // Set the active profile programmatically
-        application.setAdditionalProfiles("dev");
-
-        application.run(args);
+       SpringApplication.run(Eurekaserverboot3Application.class, args);
     }
 
 }
