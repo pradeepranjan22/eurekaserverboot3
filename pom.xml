@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.cbt</groupId>
-    <artifactId>eurekaserverboot3</artifactId>
+    <artifactId>eatnow-eureka-server</artifactId>
     <version>prod-1</version>
     <name>eurekaserverboot3</name>
     <description>eurekaserverboot3</description>
